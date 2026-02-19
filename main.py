@@ -36,8 +36,3 @@ def analytics():
         return {"results": data[:50]}
     finally:
         db.close()
-
-@app.get("/slow")
-def slow_endpoint():
-    time.sleep(3)
-    return {"message": "Intentional delay"}
